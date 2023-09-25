@@ -7,5 +7,16 @@ const fs = require('fs');
  */
 
 const readableStream = fs.createReadStream('Writable-stream/input.txt', {
-    highWaterMark: 10
+    highWaterMark: 15
 });
+const writableStream = fs.createWriteStream('Writable-Stream/output.txt');
+
+
+readableStream.on('readable', () => {
+    try {
+        writableStream.write(`${readableStream.read()}\n`);
+    } catch(error) {
+        // catch the error when the chunk cannot be read.
+    }
+});
+
