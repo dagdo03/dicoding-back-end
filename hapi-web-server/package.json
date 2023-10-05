@@ -1,7 +1,8 @@
 {
-  "name": "web-server",
+  "name": "hapi-web-server",
   "version": "1.0.0",
-  "main": "server.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -9,5 +10,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "@hapi/hapi": "^21.3.2"
+  }
 }
